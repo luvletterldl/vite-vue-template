@@ -1,0 +1,17 @@
+[build.environment]
+  NPM_FLAGS = "--version"
+  NODE_VERSION = "18"
+
+[build]
+  publish = "dist"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run generate"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+  Access-Control-Allow-Origin = '*'
