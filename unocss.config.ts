@@ -8,8 +8,19 @@ import {
   // transformerVariantGroup,
 } from 'unocss'
 
+const shortcuts = {
+  cp: 'cursor-pointer pointer-events-auto',
+  cna: 'cursor-not-allowed pointer-events-none',
+  fc: 'flex flex-col',
+  fr: 'flex-row',
+  ic: 'items-center',
+  jc: 'justify-center',
+  jb: 'justify-between',
+}
+
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: [shortcuts],
+  safelist: [...Object.keys(shortcuts)],
   presets: [
     presetUno(),
     presetAttributify(),

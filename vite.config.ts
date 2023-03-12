@@ -10,6 +10,7 @@ import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resol
 import Unocss from 'unocss/vite'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 import transformerDirective from '@unocss/transformer-directives'
+import basicSsl from '@vitejs/plugin-basic-ssl'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'unplugin-vue-inspector/vite'
 
@@ -20,9 +21,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
 
     Inspector(),
 
@@ -39,6 +38,11 @@ export default defineConfig({
         'vue/macros',
         'vue-router',
         '@vueuse/core',
+        {
+          consola: [
+            ['default', 'consola'],
+          ],
+        },
       ],
       dts: true,
       dirs: [
@@ -61,10 +65,16 @@ export default defineConfig({
         transformerVariantGroup(),
       ],
     }),
+
+    basicSsl(),
   ],
 
   // https://github.com/vitest-dev/vitest
   test: {
     environment: 'jsdom',
+  },
+
+  server: {
+    https: true,
   },
 })
