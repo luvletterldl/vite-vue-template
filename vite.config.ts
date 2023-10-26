@@ -11,8 +11,7 @@ import Unocss from 'unocss/vite'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 import transformerDirective from '@unocss/transformer-directives'
 import basicSsl from '@vitejs/plugin-basic-ssl'
-import Inspect from 'vite-plugin-inspect'
-import Inspector from 'unplugin-vue-inspector/vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
   resolve: {
@@ -21,11 +20,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    VueDevTools(),
+
     Vue(),
-
-    Inspector(),
-
-    Inspect(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
