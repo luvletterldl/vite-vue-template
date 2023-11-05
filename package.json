@@ -1,8 +1,9 @@
 {
   "name": "project-name",
-  "version": "0.0.0",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.10.0",
+  "packageManager": "pnpm@8.10.2",
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 54321 --open",
@@ -16,29 +17,29 @@
   "dependencies": {
     "@vueuse/core": "^10.5.0",
     "consola": "^3.2.3",
-    "element-plus": "^2.4.1",
-    "vant": "^4.7.2",
+    "element-plus": "^2.4.2",
+    "vant": "^4.7.3",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.43.1",
+    "@antfu/eslint-config": "^1.1.0",
     "@iconify-json/carbon": "^1.1.21",
-    "@types/node": "^20.8.9",
-    "@unocss/reset": "^0.57.1",
-    "@unocss/transformer-directives": "^0.57.1",
-    "@unocss/transformer-variant-group": "^0.57.1",
+    "@types/node": "^20.8.10",
+    "@unocss/reset": "^0.57.2",
+    "@unocss/transformer-directives": "^0.57.2",
+    "@unocss/transformer-variant-group": "^0.57.2",
     "@vitejs/plugin-basic-ssl": "^1.0.1",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/test-utils": "^2.4.1",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "jsdom": "^22.1.0",
     "lint-staged": "^15.0.2",
-    "pnpm": "^8.10.0",
+    "pnpm": "^8.10.2",
     "simple-git-hooks": "^2.9.0",
     "taze": "^0.12.0",
     "typescript": "^5.2.2",
-    "unocss": "^0.57.1",
+    "unocss": "^0.57.2",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "unplugin-vue-inspector": "^1.0.0",
@@ -53,8 +54,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "eslintConfig": {
-    "extends": "@antfu"
   }
 }
