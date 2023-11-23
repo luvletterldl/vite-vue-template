@@ -32,7 +32,6 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
       imports: [
         'vue',
-        'vue/macros',
         'vue-router',
         '@vueuse/core',
         {
@@ -69,9 +68,5 @@ export default defineConfig({
   // https://github.com/vitest-dev/vitest
   test: {
     environment: 'jsdom',
-  },
-
-  server: {
-    https: true,
   },
 })
