@@ -10,7 +10,6 @@ import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resol
 import Unocss from 'unocss/vite'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 import transformerDirective from '@unocss/transformer-directives'
-import basicSsl from '@vitejs/plugin-basic-ssl'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
@@ -65,7 +64,6 @@ export default defineConfig({
       ],
     }),
 
-    basicSsl(),
   ],
 
   // https://github.com/vitest-dev/vitest

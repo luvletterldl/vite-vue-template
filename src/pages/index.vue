@@ -10,8 +10,5 @@
     <el-button type="primary">
       el button
     </el-button>
-    <van-button type="primary">
-      van button
-    </van-button>
   </div>
 </template>

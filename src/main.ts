@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'virtual:generated-pages'
 import App from './App.vue'
+import routes from '~pages'
 
 import 'element-plus/es/components/message/style/css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@unocss/reset/tailwind-compat.css'
-import './styles/main.css'
+import './assets/styles/main.css'
 import 'uno.css'
 
 const app = createApp(App)

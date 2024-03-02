@@ -12,7 +12,8 @@
     "resolveJsonModule": true,
     "types": [
       "vite/client",
-      "vite-plugin-pages/client"
+      "vite-plugin-pages/client",
+      "element-plus/global"
     ],
     "allowJs": true,
     "strict": true,
@@ -20,6 +21,7 @@
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "skipLibCheck": true
   },
   "exclude": ["dist", "node_modules", "unocss.config.ts"]
