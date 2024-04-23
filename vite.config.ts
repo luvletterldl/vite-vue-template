@@ -18,6 +18,10 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+  build: {
+    minify: 'terser',
+    cssMinify: 'lightningcss',
+  },
   css: {
     transformer: 'lightningcss',
   },
