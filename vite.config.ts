@@ -4,6 +4,8 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resolvers'
@@ -33,7 +35,7 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
 
-    // https://github.com/antfu/unplugin-auto-import
+    // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       resolvers: [ElementPlusResolver()],
       imports: [
@@ -53,13 +55,18 @@ export default defineConfig({
       vueTemplate: true,
     }),
 
-    // https://github.com/antfu/vite-plugin-components
+    // https://github.com/unplugin/unplugin-vue-components
     Components({
-      resolvers: [ElementPlusResolver(), VantResolver()],
+      resolvers: [IconsResolver(), ElementPlusResolver(), VantResolver()],
       dts: true,
     }),
 
-    // https://github.com/antfu/unocss
+    // https://github.com/unplugin/unplugin-icons
+    Icons({
+      autoInstall: true,
+    }),
+
+    // https://github.com/unocss/unocss
     // see unocss.config.ts for config
     Unocss({
       transformers: [
