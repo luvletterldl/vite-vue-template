@@ -3,9 +3,10 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  // transformerDirectives,
-  // transformerVariantGroup,
 } from 'unocss'
+
+import transformerVariantGroup from '@unocss/transformer-variant-group'
+import transformerDirective from '@unocss/transformer-directives'
 
 const shortcuts = {
   cp: 'cursor-pointer pointer-events-auto',
@@ -39,8 +40,8 @@ export default defineConfig({
       bk: '#333',
     },
   },
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  transformers: [
+    transformerDirective(),
+    transformerVariantGroup(),
+  ],
 })

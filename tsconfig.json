@@ -12,8 +12,7 @@
     "resolveJsonModule": true,
     "types": [
       "vite/client",
-      "vite-plugin-pages/client",
-      "element-plus/global"
+      "vite-plugin-pages/client"
     ],
     "allowJs": true,
     "strict": true,

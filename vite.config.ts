@@ -10,8 +10,6 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
-import transformerVariantGroup from '@unocss/transformer-variant-group'
-import transformerDirective from '@unocss/transformer-directives'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
@@ -43,8 +41,11 @@ export default defineConfig({
         'vue-router',
         '@vueuse/core',
         {
-          consola: [
+          'consola': [
             ['default', 'consola'],
+          ],
+          'element-plus': [
+            'dayjs',
           ],
         },
       ],
@@ -68,12 +69,7 @@ export default defineConfig({
 
     // https://github.com/unocss/unocss
     // see unocss.config.ts for config
-    Unocss({
-      transformers: [
-        transformerDirective(),
-        transformerVariantGroup(),
-      ],
-    }),
+    Unocss(),
 
   ],
 
