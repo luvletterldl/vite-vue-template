@@ -1,7 +1,7 @@
 # vite-vue-template
 
 - vue3
-- vite4
+- vite5
 - unocss
 - element-plus
 - vant
