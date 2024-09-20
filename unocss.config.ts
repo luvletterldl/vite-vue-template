@@ -1,12 +1,12 @@
+import transformerDirective from '@unocss/transformer-directives'
+import transformerVariantGroup from '@unocss/transformer-variant-group'
+
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetUno,
 } from 'unocss'
-
-import transformerVariantGroup from '@unocss/transformer-variant-group'
-import transformerDirective from '@unocss/transformer-directives'
 
 const shortcuts = {
   cp: 'cursor-pointer pointer-events-auto',

@@ -1,15 +1,15 @@
 /// <reference types="vitest" />
 
 import path from 'node:path'
-import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
+import Pages from 'vite-plugin-pages'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
@@ -70,7 +70,6 @@ export default defineConfig({
     // https://github.com/unocss/unocss
     // see unocss.config.ts for config
     Unocss(),
-
   ],
 
   // https://github.com/vitest-dev/vitest
